@@ -14,6 +14,7 @@
       {% endif %}
     </div>
     <div class="contact-data-wrapper">
+     {% if 'administrator' in user.getroles %}
       <div class="administration-buttons-wrapper">
         <div class="delete-comment">
           <a href="/guestbook/reviews/{{value['id']}}/delete" class="use-ajax" data-dialog-options="{&quot;classes&quot;:{&quot;ui-dialog&quot;: &quot;ui-corner-all  my-modal-delete&quot;}}" data-dialog-type="modal">Delete</a>
@@ -22,6 +23,7 @@
           <a href="/guestbook/reviews/{{value['id']}}/edit" class="use-ajax" data-dialog-options="{&quot;classes&quot;:{&quot;ui-dialog&quot;: &quot;ui-corner-all  my-modal-edit&quot;}}" data-dialog-type="modal">Edit</a>
         </div>
       </div>
+      {% endif %}
       <div class="contact-container">
         <div class="phone-container">{{ value['phone'] }}</div>
         <div class="email-container">{{ value['email'] }}</div>
