@@ -1,0 +1,31 @@
+{{ attach_library('guestbook/guestbook.reviews') }}
+{{ form }}
+{%  for value in guestbook_table %}
+  <div class="main-wrapper">
+    <div class = "user-data-wrapper">
+      <div class="avatar-container">{{ value['avatar']}}</div>
+      <div class="name-container">{{ value['name'] }}</div>
+      <div class="date-container">{{ value['date_created'] }}</div>
+    </div>
+    <div class = "review-wrapper">
+      <div class="comment-container">{{ value['review'] }}</div>
+      {% if value['image'] != NULL %}
+        <div class="image-container">{{ value['image'] }}</div>
+      {% endif %}
+    </div>
+    <div class="contact-data-wrapper">
+      <div class="administration-buttons-wrapper">
+        <div class="delete-comment">
+          <a href="/guestbook/reviews/{{value['id']}}/delete" class="use-ajax" data-dialog-options="{&quot;classes&quot;:{&quot;ui-dialog&quot;: &quot;ui-corner-all  my-modal-delete&quot;}}" data-dialog-type="modal">Delete</a>
+        </div>
+        <div class="edit-comment">
+          <a href="/guestbook/reviews/{{value['id']}}/edit" class="use-ajax" data-dialog-options="{&quot;classes&quot;:{&quot;ui-dialog&quot;: &quot;ui-corner-all  my-modal-edit&quot;}}" data-dialog-type="modal">Edit</a>
+        </div>
+      </div>
+      <div class="contact-container">
+        <div class="phone-container">{{ value['phone'] }}</div>
+        <div class="email-container">{{ value['email'] }}</div>
+      </div>
+    </div>
+  </div>
+{% endfor %}

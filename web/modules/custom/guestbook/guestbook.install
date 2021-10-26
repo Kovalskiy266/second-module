@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Realization hook_schema()
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function guestbook_schema() {
+  $schema['guestbook'] = [
+    'description' => 'Database table for cats',
+    'fields' => [
+      'id' => [
+        'description' => 'Key',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'Name of user',
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'email' => [
+        'description' => 'Email of user',
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'phone' => [
+        'description' => 'Number phone of user',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'review' => [
+        'description' => 'Review of user',
+        'type' => 'text',
+        'size' => 'normal',
+        'not null' => FALSE,
+      ],
+      'avatar' => [
+        'description' => 'Avatar of user',
+        'type' => 'int',
+        'length' => 30,
+        'not null' => FALSE,
+      ],
+      'image' => [
+        'description' => 'Image for comment',
+        'type' => 'int',
+        'length' => 30,
+        'not null' => FALSE,
+      ],
+      'date_created' => [
+        'description' => 'Data when the record was created',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+
+    ],
+    'primary key' => [
+      'id',
+    ],
+  ];
+
+  return $schema;
+}

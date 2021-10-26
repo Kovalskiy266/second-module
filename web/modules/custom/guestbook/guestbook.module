@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Realization hook_theme()
+ */
+
+/**
+ * Register template files.
+ */
+function guestbook_theme($existing, $type, $theme, $path):array {
+  return [
+    'guestbook-page' => [
+      'variables' => [
+        'form' => NULL,
+        'guestbook_table' => NULL,
+      ],
+    ],
+  ];
+};

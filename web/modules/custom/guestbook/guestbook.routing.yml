@@ -1,0 +1,25 @@
+guestbook.reviews:
+  path: '/guestbook/reviews'
+  defaults:
+    _controller: '\Drupal\guestbook\Controller\GuestReviewsController::build'
+    _title: 'Guest Reviews'
+  requirements:
+    _permission: 'access content'
+
+
+guestbook.reviews_delete:
+  path: '/guestbook/reviews/{id}/delete'
+  defaults:
+    _form: '\Drupal\guestbook\Form\GuestBookDeleteForm'
+    _title: 'Delete Form'
+  requirements:
+    _permission: 'access content'
+
+
+guestbook.reviews_edit:
+  path: '/guestbook/reviews/{id}/edit'
+  defaults:
+    _form: '\Drupal\guestbook\Form\GuestBookEditForm'
+    _title: 'Edit Form'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,104 @@
+.main-wrapper,
+.user-data-wrapper,
+.review-wrapper,
+.contact-data-wrapper,
+.administration-buttons-wrapper {
+  display: flex;
+  width: 100%;
+}
+.name-container {
+  margin-left: 20px;
+}
+
+.date-container {
+  margin-left: auto;
+}
+
+.main-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  border: 3px solid #453939;
+  padding: 20px;
+  background-color: #e3d1d1;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.comment-container,
+.image-container {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.none-image {
+  width: 10%;
+}
+
+.image-container img {
+  float: right;
+}
+
+
+.phone-container {
+  margin-left: auto;
+}
+
+.email-container {
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form .custom-class {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+form label {
+  margin: 0 auto 5px auto;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+form  .form-textarea-wrapper textarea {
+  margin: 0 auto;
+}
+
+.edit-comment {
+  margin-left: 15px;
+}
+
+.administration-buttons-wrapper,
+.contact-container {
+  width: 50%;
+}
+
+.contact-container {
+  text-align: right;
+}
+.administration-buttons-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.user-data-wrapper {
+  border-bottom: 2px solid grey;
+  padding-bottom: 10px;
+}
+
+.review-wrapper {
+  padding-bottom: 20px;
+  border-bottom: 2px solid grey;
+}
+
+.contact-data-wrapper {
+  padding-top: 20px;
+}

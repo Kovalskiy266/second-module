@@ -1,0 +1,13 @@
+/.idea/
+/vendor/
+/.docksal/
+/.env
+
+web/core/
+web/modules/contrib/
+web/themes/contrib/
+web/profiles/contrib/
+
+web/themes/**/node_modules/
+web/modules/custom/guestbook/node_modules/
+web(copy)/
